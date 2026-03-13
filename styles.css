@@ -50,6 +50,7 @@
 .canvas-node:has(.canvas-node-collapse-control) {
 	width: fit-content;
 	height: fit-content;
+	overflow: visible;
 }
 
 /*.canvas-node-group:not(.is-focused):not(.is-selected) {*/
@@ -67,7 +68,9 @@
 
 .canvas-node.collapsed {
 	height: calc(30px * var(--zoom-multiplier)) !important;
-	max-height: fit-content;
+	min-height: calc(30px * var(--zoom-multiplier)) !important;
+	max-height: calc(30px * var(--zoom-multiplier)) !important;
+	overflow: visible !important;
 	transition: height 0.2s ease-in-out, max-height 0.2s ease-in-out;
 }
 
